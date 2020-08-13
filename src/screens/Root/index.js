@@ -6,6 +6,8 @@ import {NavigationContainer} from '@react-navigation/native';
 import {actions as authActions} from 'store/auth';
 import {selectProfile} from 'store/auth/selectors';
 
+import {getProfile} from 'services/http/auth';
+
 import AuthStack from 'navigation/AuthStack';
 import AppStack from 'navigation/AppStack';
 
@@ -15,8 +17,13 @@ const RootScreen = () => {
   const profile = useSelector(selectProfile);
   const dispatch = useDispatch();
 
-  useEffect(() => {
+  const loadProfile = async () => {
+    // const user = await getProfile();
     dispatch(authActions.authenticate(user));
+  };
+
+  useEffect(() => {
+    loadProfile();
   }, []);
 
   return (
