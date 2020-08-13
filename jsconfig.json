@@ -12,7 +12,8 @@
       "@services": ["./services"],
       "@store": ["./store"],
       "@i18n": ["./i18n"],
-      "@utils": ["./utils"]
+      "@utils": ["./utils"],
+      "@theme": ["./theme"]
     }
   },
   "include": ["src"],
