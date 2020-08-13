@@ -1,11 +1,13 @@
 import React from 'react';
 import {View, Text} from 'react-native';
 
+import * as S from './styled';
+
 const LoginScreen = () => {
   return (
-    <View>
-      <Text>LoginScreen</Text>
-    </View>
+    <S.Container>
+      <S.TitleText>LoginScreen</S.TitleText>
+    </S.Container>
   );
 };
 
