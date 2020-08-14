@@ -1,12 +1,13 @@
 import React from 'react';
-import {View, Text} from 'react-native';
+import {useTranslation} from 'react-i18next';
 
 import * as S from './styled';
 
 const LoginScreen = () => {
+  const {i18n} = useTranslation();
   return (
     <S.Container>
-      <S.TitleText>LoginScreen</S.TitleText>
+      <S.TitleText>{i18n.t('screens.login.title')}</S.TitleText>
     </S.Container>
   );
 };

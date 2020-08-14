@@ -1,5 +1,6 @@
 import React from 'react';
 import {useSelector} from 'react-redux';
+import {useTranslation} from 'react-i18next';
 
 import {selectProfile} from 'store/auth/selectors';
 
@@ -9,6 +10,8 @@ import * as S from './styled';
 
 const UserScreen = (props) => {
   const {navigation} = props;
+
+  const {i18n} = useTranslation();
   const profile = useSelector(selectProfile);
 
   const navigateTo = (routeName) => {
@@ -22,7 +25,7 @@ const UserScreen = (props) => {
       </S.ProfileBlock>
       <S.ButtonContainer>
         <S.ButtonWrapper
-          title="Go to login"
+          title={i18n.t('screens.user.seeDetails')}
           onPress={() => navigateTo(USER_DETAILS)}
         />
       </S.ButtonContainer>
