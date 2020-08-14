@@ -1,0 +1,10 @@
+{
+  "screens": {
+    "login": {
+      "title": "Écran de connexion"
+    },
+    "user": {
+      "seeDetails": "Voir les détails"
+    }
+  }
+}

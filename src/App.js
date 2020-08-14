@@ -9,6 +9,7 @@ import configureStore from './store/configureStore';
 import RootScreen from './screens/Root';
 
 import theme from './theme';
+import './i18n';
 
 const store = configureStore();
 
